@@ -30,7 +30,7 @@ SECRET_KEY = '5di3vxl_+b-q3a_8j*j7tm$6$g5=9)t3%_yt4bvl62#^291l4z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [pagematrix.herokuapp.com]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -55,7 +55,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -156,7 +155,6 @@ if DEBUG:
 
     )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 CRISPY_TEMPLATE_PACK ='bootstrap3'
@@ -194,7 +192,3 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 
 
 
-
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
