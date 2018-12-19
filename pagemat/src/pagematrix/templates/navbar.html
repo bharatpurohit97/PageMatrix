@@ -1,0 +1,56 @@
+    
+   
+
+
+
+
+
+
+ <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top" >
+        <div class="container" >
+
+           {% url 'home' as home %}
+           {% url 'services' as services %}
+           {% url 'contact' as contact %}
+           {% url 'learn' as learn %}
+          
+          <div class="navbar-header">
+      
+            <a class="navbar-brand" href="{% url 'home' %}"><b>PageMatrix</b></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a>             </a></li>
+              <li {% if request.path == home %} class = "active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
+              <li {% if request.path == services %} class = "active" {% endif %}><a href="{% url 'services' %}">Services</a></li>
+              <li {% if request.path == contact %} class = "active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
+              <li {% if request.path == learn %} class = "active" {% endif %}><a href="{% url 'learn' %}">Learn from Us </a></li>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  
+                  {% if not request.user.is_authenticated %}
+
+                  <li><a href="{% url 'account_signup'  %}"> Signup </a> </li>
+                  <li> <a href="{% url 'account_login'  %}"> Login </a> </li>
+                  {% else %}
+                  <li> <a href="{% url 'account_logout'  %}"> Signout </a></li>
+                  {% endif %}
+
+
+                </ul>
+              </li>
+             
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+        <li>  <!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/in/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/in/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" border="0" alt="PayPal Logo" style="padding:12px;"></a></td></tr></table><!-- PayPal Logo --></li>
+           </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+
+      </nav>
+
+
+
+ 

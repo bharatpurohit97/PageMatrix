@@ -1,0 +1,2 @@
+web: gunicorn pagemat.wsgi --log-file -
+

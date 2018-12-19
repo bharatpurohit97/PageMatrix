@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block masthead %}
+
+
+
+<style>
+textarea.Whiteboard{
+  resize: none;
+  background-color: #F1F1F1;
+  border: none;
+  height: 40px;
+  width: 700px;
+  font-size: 20px;
+  
+  white-space: normal;
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+</style>
+
+
+   <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container" >
+        <div class="row">
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <h1 class="mb-5">Check Your Page Rank Instantly!</h1></div>
+          </div></br>
+          <div class="row">
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            
+        
+
+            <form method="POST" action="/getdata/">
+            
+              
+
+                <tr>
+              
+               <input type="text" name="email"  class="form-control form-control-lg" placeholder="Enter website"/></br>
+               </tr>
+                <tr>
+                
+<select class="form-control" name = "phone">
+<option>Worldwide</option>
+<option>Ascension Island</option>
+<option>Andorra</option>
+<option>United Arab Emirates</option>
+<option>Afghanistan</option>
+<option>Antigua and Barbuda</option>
+<option>Anguilla</option>
+<option>Albania</option>
+<option>Armenia</option>
+<option>Angola</option>
+<option>Argentina</option>
+<option>American Samoa</option>
+<option>Austria</option>
+<option>Australia</option>
+<option>Azerbaijan</option>
+<option>Bosnia and Herzegovina</option>
+<option>Bangladesh</option>
+<option>Belgium</option>
+<option>Burkina Faso</option>
+<option>Bulgaria</option>
+<option>Bahrain</option>
+<option>Burundi</option>
+<option>Benin</option>
+<option>Brunei</option>
+<option>Bolivia</option>
+<option>Brazil</option>
+<option>Bahamas</option>
+<option>Bhutan</option>
+<option>Botswana</option>
+<option>Belarus</option>
+<option>Belize</option>
+<option>Canada</option>
+<option>Cambodia</option>
+<option>Cocos (Keeling) Islands</option>
+<option>Democratic Republic of the Congo</option>
+<option>Central African Republic</option>
+<option>Catalan Countries</option>
+<option>Republic of the Congo</option>
+<option>Switzerland</option>
+<option>Ivory Coast</option>
+<option>Cook Islands</option>
+<option>Chile</option>
+<option>Cameroon</option>
+<option>China</option>
+<option>Colombia</option>
+<option>Costa Rica</option>
+<option>Cuba</option>
+<option>Cape Verde</option>
+<option>Cyprus</option>
+<option>Czech Republic</option>
+<option>Germany</option>
+<option>Djibouti</option>
+<option>Denmark</option>
+<option>Dominica</option>
+<option>Dominican Republic</option>
+<option>Algeria</option>
+<option>Ecuador</option>
+<option>Estonia</option>
+<option>Egypt</option>
+<option>Spain</option>
+<option>Ethiopia</option>
+<option>Finland</option>
+<option>Fiji</option>
+<option>Federated States of Micronesia</option>
+<option>France</option>
+<option>Gabon</option>
+<option>Georgia</option>
+<option>French Guiana</option>
+<option>Guernsey</option>
+<option>Ghana</option>
+<option>Gibraltar</option>
+<option>Greenland</option>
+<option>Gambia</option>
+<option>Guadeloupe</option>
+<option>Greece</option>
+<option>Guatemala</option>
+<option>Guyana</option>
+<option>Hong Kong</option>
+<option>Honduras</option>
+<option>Croatia</option>
+<option>Haiti</option>
+<option>Hungary</option>
+<option>Indonesia</option>
+<option>Iraq</option>
+<option>Ireland</option>
+<option>Israel</option>
+<option>Isle of Man</option>
+<option>India</option>
+<option>British Indian Ocean Territory</option>
+<option>Iceland</option>
+<option>Italy</option>
+<option>Jersey</option>
+<option>Jamaica</option>
+<option>Jordan</option>
+<option>Japan</option>
+<option>Kenya</option>
+<option>Kiribati</option>
+<option>Kyrgyzstan</option>
+<option>South Korea</option>
+<option>Kuwait</option>
+<option>Kazakhstan</option>
+<option>Laos</option>
+<option>Lebanon</option>
+<option>Saint Lucia</option>
+<option>Liechtenstein</option>
+<option>Sri Lanka</option>
+<option>Lesotho</option>
+<option>Lithuania</option>
+<option>Luxembourg</option>
+<option>Latvia</option>
+<option>Libya</option>
+<option>Morocco</option>
+<option>Moldova</option>
+<option>Montenegro</option>
+<option>Madagascar</option>
+<option>Macedonia</option>
+<option>Mali</option>
+<option>Myanmar</option>
+<option>Mongolia</option>
+<option>Montserrat</option>
+<option>Malta</option>
+<option>Mauritius</option>
+<option>Maldives</option>
+<option>Malawi</option>
+<option>Mexico</option>
+<option>Malaysia</option>
+<option>Mozambique</option>
+<option>Namibia</option>
+<option>Niger</option>
+<option>Norfolk Island</option>
+<option>Nigeria</option>
+<option>Nicaragua</option>
+<option>Netherlands</option>
+<option>Norway</option>
+<option>Nepal</option>
+<option>Nauru</option>
+<option>Niue</option>
+<option>New Zealand</option>
+<option>Oman</option>
+<option>Pakistan</option>
+<option>Panama</option>
+<option>Peru</option>
+<option>Philippines</option>
+<option>Poland</option>
+<option>Papua New Guinea</option>
+<option>Pitcairn Islands</option>
+<option>Puerto Rico</option>
+<option>Palestine[4]</option>
+<option>Portugal</option>
+<option>Paraguay</option>
+<option>Qatar</option>
+<option>Romania</option>
+<option>Serbia</option>
+<option>Russia</option>
+<option>Rwanda</option>
+<option>Saudi Arabia</option>
+<option>Solomon Islands</option>
+<option>Seychelles</option>
+<option>Sweden</option>
+<option>Singapore</option>
+<option>Saint Helena Ascension and Tristan da Cunha</option>
+<option>Slovenia</option>
+<option>Slovakia</option>
+<option>Sierra Leone</option>
+<option>Senegal</option>
+<option>San Marino</option>
+<option>Somalia</option>
+<option>São Tomé and Príncipe</option>
+<option>Suriname</option>
+<option>El Salvador</option>
+<option>Chad</option>
+<option>Togo</option>
+<option>Thailand</option>
+<option>Tajikistan</option>
+<option>Tokelau</option>
+<option>Timor-Leste</option>
+<option>Turkmenistan</option>
+<option>Tonga</option>
+<option>Tunisia</option>
+<option>Turkey</option>
+<option>Trinidad and Tobago</option>
+<option>Taiwan</option>
+<option>Tanzania</option>
+<option>Ukraine</option>
+<option>Uganda</option>
+<option>United Kingdom</option>
+<option>United States</option>
+<option>Uruguay</option>
+<option>Uzbekistan</option>
+<option>Saint Vincent and the Grenadines</option>
+<option>Venezuela</option>
+<option>British Virgin Islands</option>
+<option>United States Virgin Islands</option>
+<option>Vietnam</option>
+<option>Vanuatu</option>
+<option>Samoa</option>
+<option>South Africa</option>
+<option>Zambia</option>
+<option>Zimbabwe</option>
+</select>
+
+
+             </br>
+               
+                <tr>
+
+                <tr>
+                <textarea rows="4" cols="50" name="name" class = "form-control form-control-lg" placeholder="Enter your keywords (one keyword per line)"></textarea></br>
+                </tr>
+                
+                <button  class="btn btn-block btn-lg btn-primary" >Submit</button>
+                
+                 </tr>
+               
+              </form>
+
+               
+            </div>
+            </div>
+
+
+             <div class="row">
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+
+              <form method="POST" action="/getdata/">
+    
+            <tr>
+            {% if name %}
+            <td></br></br><strong><em><textarea class="Whiteboard" rows="4" cols="30"  class = "form-control form-control-lg" align = "center" >{{ name }}</textarea></em></strong></td>
+           </tr>
+           <tr>
+              
+            <td><strong>{{ email }}</strong></td>
+          </tr>
+           <tr>
+            
+            <td><strong>{{ phone }}</strong></td>
+        </tr>
+        
+        {% endif %}
+
+          </form>
+         </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div>
+          <h2>PageMatrix</h2>
+          <p>PageMatrix is a tool Suite that helps you in Automation of stuffs. While demand for data analysts is at an all-time high, the online community still leaves some to be desired. Our mission is to provide automation in these resources and let automate the time consuming tasks.</p>
+          
+        </div>
+  
+        
+      </div>
+           
+
+      
+    </div> <!-- /container -->
+
+
+
+   <hr>
+    <footer>
+        <p>&copy; 2018 PageMatrix, Inc.</p>
+      </footer>
+
+
+
+
+
+
+{% endblock %}

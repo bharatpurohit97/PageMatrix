@@ -1,0 +1,66 @@
+{% load staticfiles %}
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PageMatrix</title>
+
+    <!-- Bootstrap core CSS -->
+   <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap.min11.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/theme1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ie10-viewport-bug-workaround1.css' %}" rel="stylesheet">
+     <link href="{% static 'css/landing-page.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+
+
+
+  </head>
+
+  <body>
+
+  {% include 'navbar.html' %}
+    
+ {% block masthead %}
+    {% endblock %}
+  
+   
+   {% block content%}
+    {% endblock %}
+
+ 
+
+   
+
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="{% static 'javascript/jquery.min1.js' %}"></script>
+  <script src="{% static 'javascript/bootstrap.min1.js' %}"></script>
+  <script src="{% static 'javascript/docs.min1.js' %}"></script>
+  
+  <script src="{% static 'javascript/ie10-viewport-bug-workaround1.js' %}"></script>
+
+ 
+
+  {% block script %}
+
+  {% endblock %}
+
+  
+   </body>
