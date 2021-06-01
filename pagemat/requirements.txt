@@ -38,7 +38,7 @@ six==1.11.0
 SQLAlchemy==1.2.11
 stripe==2.4.0
 tbselenium==0.3.3
-urllib3==1.23
+urllib3==1.26.5
 whitenoise==4.1.2
 XlsxWriter==1.0.7
 yarl==1.2.6
